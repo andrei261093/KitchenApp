@@ -11,11 +11,11 @@ import java.util.List;
  */
 public class Order {
     private List<Product> products;
-    private int tableNo;
+    private String tableNo;
     private JSONObject orderJson;
 
     public Order(JSONObject orderJson) {
-        this.tableNo = orderJson.getInt("tableNo");
+        this.tableNo = "Table Number: " + orderJson.getInt("tableNo");
         this.orderJson = orderJson;
         products = new ArrayList<Product>();
 
@@ -26,11 +26,11 @@ public class Order {
         }
     }
 
-    public int getTableNo() {
+    public String getTableNo() {
         return tableNo;
     }
 
-    public void setTableNo(int tableNo) {
+    public void setTableNo(String tableNo) {
         this.tableNo = tableNo;
     }
 

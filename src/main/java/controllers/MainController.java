@@ -78,7 +78,6 @@ public class MainController {
     }
 
     public class LineNumbersCellFactory<T, E> implements Callback<TableColumn<T, E>, TableCell<T, E>> {
-
         public LineNumbersCellFactory() {
         }
 

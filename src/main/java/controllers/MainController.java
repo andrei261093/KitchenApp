@@ -8,6 +8,7 @@ import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 import model.Order;
 import model.Product;
@@ -75,6 +76,13 @@ public class MainController {
 
         ObservableList<Order> dataOrder = FXCollections.observableArrayList(orderList);
         orderTable.setItems(dataOrder);
+    }
+
+    public void showProducts(MouseEvent mouseEvent) {
+        Order order = orderTable.getSelectionModel().getSelectedItem();
+
+        ObservableList<Product> productData = FXCollections.observableArrayList(order.getProducts());
+        productTable.setItems(productData);
     }
 
     public class LineNumbersCellFactory<T, E> implements Callback<TableColumn<T, E>, TableCell<T, E>> {

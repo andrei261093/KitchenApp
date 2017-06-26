@@ -41,4 +41,12 @@ public class Order {
     public void setOrderJson(JSONObject orderJson) {
         this.orderJson = orderJson;
     }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
 }

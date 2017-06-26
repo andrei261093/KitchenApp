@@ -34,7 +34,7 @@
     <center>
         <SplitPane dividerPositions="0.5" pickOnBounds="false" prefHeight="396.0" prefWidth="644.0" BorderPane.alignment="CENTER">
             <items>
-                <TableView fx:id="orderTable" prefHeight="200.0" prefWidth="200.0">
+                <TableView fx:id="orderTable" onMouseClicked="#showProducts" prefHeight="200.0" prefWidth="200.0">
                     <columnResizePolicy>
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>

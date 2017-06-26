@@ -1,6 +1,7 @@
 package tcpClient;
 
 import controllers.MainController;
+import org.json.JSONObject;
 import staticUtils.StaticUtilsVariables;
 
 import java.io.BufferedReader;
@@ -60,6 +61,12 @@ public class TcpClient{
             try {
                 while ((stream = reader.readLine()) != null) {
                     System.out.println(stream);
+                    try{
+                        JSONObject orderJson = new JSONObject(stream);
+                        mainController.addOrder(orderJson);
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
                 }
             } catch (Exception ex) {
 

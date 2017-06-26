@@ -39,8 +39,8 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                     <columns>
-                        <TableColumn editable="false" maxWidth="500.0" minWidth="20.0" prefWidth="46.0" text="Index" />
-                        <TableColumn maxWidth="500.0" minWidth="20.0" prefWidth="302.0" text="Table" />
+                        <TableColumn fx:id="orderTableIndexColumn" editable="false" maxWidth="500.0" minWidth="20.0" prefWidth="46.0" text="Index" />
+                        <TableColumn fx:id="orderTablelNoColumn" maxWidth="500.0" minWidth="20.0" prefWidth="302.0" text="Table" />
                     </columns>
                 </TableView>
                 <TableView fx:id="productTable" prefHeight="200.0" prefWidth="200.0">
@@ -48,9 +48,9 @@
                         <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                     <columns>
-                        <TableColumn maxWidth="500.0" minWidth="20.0" prefWidth="57.0" text="Index" />
-                        <TableColumn editable="false" maxWidth="500.0" minWidth="20.0" prefWidth="145.3333740234375" text="Product Name" />
-                        <TableColumn maxWidth="500.0" minWidth="20.0" prefWidth="162.9998779296875" text="Description" />
+                        <TableColumn fx:id="productTableIndexColumn" maxWidth="500.0" minWidth="20.0" prefWidth="57.0" text="Index" />
+                        <TableColumn fx:id="productTableINameColumn" editable="false" maxWidth="500.0" minWidth="20.0" prefWidth="145.3333740234375" text="Product Name" />
+                        <TableColumn fx:id="productTableIDescriptionColumn" maxWidth="500.0" minWidth="20.0" prefWidth="162.9998779296875" text="Description" />
                     </columns>
                 </TableView>
             </items>

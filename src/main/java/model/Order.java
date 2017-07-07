@@ -1,7 +1,9 @@
 package model;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import staticUtils.StaticUtilsVariables;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +15,7 @@ public class Order {
     private List<Product> products;
     private String tableNo;
     private JSONObject orderJson;
+    private String status = StaticUtilsVariables.ORDER_STATUS_NONE;
 
     public Order(JSONObject orderJson) {
         this.tableNo = "Table Number: " + orderJson.getInt("tableNo");
@@ -48,5 +51,13 @@ public class Order {
 
     public void setProducts(List<Product> products) {
         this.products = products;
+    }
+
+    public void setStatus(String status){
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }

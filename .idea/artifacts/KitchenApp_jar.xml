@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="KitchenApp:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/KitchenApp_jar</output-path>
+    <root id="archive" name="KitchenApp.jar">
+      <element id="module-output" name="KitchenApp" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/json/json/20170516/json-20170516.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
